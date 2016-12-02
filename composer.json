@@ -3,19 +3,25 @@
     "description": "Test task",
     "type": "symfony-bundle",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Mikhail Viktorovich",
+            "email": "miviskin@gmail.com"
+        }
+    ],
     "autoload": {
         "psr-4": {
-            "Miviskin\\AzovskyBundle\\": "",
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "Tests/"
+            "Miviskin\\AzovskyBundle\\": ""
         }
     },
     "require": {
         "php": ">=5.5.9",
         "symfony/dom-crawler": "^3.2",
         "symfony/css-selector": "^3.2"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "master"
+        }
     }
 }
