@@ -1,0 +1,21 @@
+{
+    "name": "miviskin/symfony3-test-task-azovsky-bundle",
+    "description": "Test task",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Miviskin\\AzovskyBundle\\": "",
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "Tests/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.9",
+        "symfony/dom-crawler": "^3.2",
+        "symfony/css-selector": "^3.2"
+    }
+}

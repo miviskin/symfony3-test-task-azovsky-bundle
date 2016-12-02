@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="wrapper">
+        <div id="container">
+
+            <div>
+                <h1><span>Currency rate USDRUB</span></h1>
+                <span id="Rate"></span>
+            </div>
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
+        h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
+        h1 { font-size: 36px; }
+        h2 { font-size: 21px; margin-bottom: 1em; }
+        #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
+        #container { padding: 2em; }
+        #welcome, #status { margin-bottom: 2em; }
+        #welcome h1 span { display: block; font-size: 75%; }
+        #Rate { line-height: 1.2; margin: 0 0 .5em; font-size: 36px; }
+    </style>
+{% endblock %}
+
+{% block javascripts %}
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="application/javascript">
+        $(function() {
+            getCurrencyRate();
+
+            setInterval(getCurrencyRate, 10000);
+
+            function getCurrencyRate() {
+                var post = $.post('/rate/USDRUB');
+
+                post.done(function(rate) {
+                    $('#Rate').text(rate);
+                });
+            }
+        });
+    </script>
+{% endblock %}

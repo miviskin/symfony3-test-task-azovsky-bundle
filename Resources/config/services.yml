@@ -1,0 +1,15 @@
+parameters:
+
+    miviskin_azovsky.sources:
+        - \Miviskin\AzovskyBundle\Sources\CbrSource
+        - \Miviskin\AzovskyBundle\Sources\YahooSource
+
+services:
+
+#    miviskin_azovsky.example:
+#        class: Miviskin\AzovskyBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
+
+    miviskin_azovsky.manager:
+        class: Miviskin\AzovskyBundle\Manager
+        arguments: ["@service_container", "%miviskin_azovsky.sources%"]
