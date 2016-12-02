@@ -1,14 +1,28 @@
 symfony3-test-task-azovsky-bundle
 =====================
 
-```shell
-$ composer install
+## Install via Composer
+
+In composer.json
+```json
+{
+    "repositories": [
+        {
+            "type": "vcs",
+            "url":  "https://github.com/miviskin/symfony3-test-task-azovsky-bundle.git"
+        }
+    ],
+    "require": {
+        "miviskin/symfony3-test-task-azovsky-bundle": "dev-master"
+    }
+}
 ```
 
-```shell
-$ php bin/console server:run
-```
+Update composer
 
+```shell
+$ composer update
+```
 
 ## Enable the bundle
 
@@ -18,7 +32,7 @@ public function registerBundles()
 {
     $bundles = [
         // ...
-        new Miviskin\AzovskyBundle\MiviskinAzovskyBundle(),      
+        new Miviskin\AzovskyBundle\MiviskinAzovskyBundle(),     
     ];
     // ...
 }
@@ -26,13 +40,15 @@ public function registerBundles()
 
 ## Routing
 
-In app/config/routing.yml
+Prepend into app/config/routing.yml
 ```yaml
 miviskin_azovsky:
     resource: "@MiviskinAzovskyBundle/Controller/"
     type:     annotation
     prefix:   /
 ```
+
+## Configuration
 
 In app/config/config.yml
 ```yaml
@@ -43,8 +59,14 @@ imports:
 parameters:
     ...
     miviskin_azovsky.sources:
-        - "\\Miviskin\AzovskyBundle\\Sources\\CbrSource"
-        - "\\Miviskin\AzovskyBundle\\Sources\\YahooSource"
+        - \Miviskin\AzovskyBundle\Sources\CbrSource
+        - \Miviskin\AzovskyBundle\Sources\YahooSource
 ```
 
-open url http://localhost:8000/rate
+## Start dev server
+
+```shell
+$ php bin/console server:run
+```
+
+open URL [http://localhost:8000/rate](http://localhost:8000/rate)
