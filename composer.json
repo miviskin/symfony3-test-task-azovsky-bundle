@@ -1,7 +1,7 @@
 {
     "name": "miviskin/symfony3-test-task-azovsky-bundle",
     "description": "Test task",
-    "type": "symfony-bundle",
+    "type": "library",
     "license": "MIT",
     "authors": [
         {
