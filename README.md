@@ -1,7 +1,11 @@
 symfony3-test-task-azovsky-bundle
 =====================
 
-## Install via Composer
+## Install Symfony3 if need
+
+<a href="http://symfony.com/doc/current/setup.html">Installing & Setting up the Symfony Framework</a>
+
+## Install bundle via Composer
 
 In composer.json
 ```json

@@ -1,8 +1,6 @@
 parameters:
 
-    miviskin_azovsky.sources:
-        - \Miviskin\AzovskyBundle\Sources\CbrSource
-        - \Miviskin\AzovskyBundle\Sources\YahooSource
+    miviskin_azovsky.sources: []
 
 services:
 
