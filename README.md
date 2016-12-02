@@ -69,4 +69,4 @@ parameters:
 $ php bin/console server:run
 ```
 
-open URL [http://localhost:8000/rate](http://localhost:8000/rate)
+open URL <a href="http://localhost:8000/rate" target="_blank">http://localhost:8000/rate</a>
